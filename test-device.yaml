@@ -1,6 +1,6 @@
 esphome:
-  name: esphome-web-f370e8
-  friendly_name: esp32-relay
+  name: test-device
+  friendly_name: test-device
 
 esp32:
   board: esp32dev
@@ -37,8 +37,7 @@ captive_portal:
 switch:
   - platform: gpio
     name: relay
-    internal: true
-    pin: GPIO16
+    pin: GPIO27
     id: relay
     restore_mode: restore_default_off
 

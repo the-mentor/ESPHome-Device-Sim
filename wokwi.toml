@@ -1,7 +1,7 @@
 [wokwi]
 version = 1
-elf = ".esphome/build/esphome-web-f370e8/.pioenvs/esphome-web-f370e8/firmware.elf"
-firmware = ".esphome/build/esphome-web-f370e8/.pioenvs/esphome-web-f370e8/firmware.bin"
+elf = ".esphome/build/test-device/.pioenvs/test-device/firmware.elf"
+firmware = ".esphome/build/test-device/.pioenvs/test-device/firmware.bin"
 
 # Forward http://localhost:8180 to port 80 on the simulated ESP32:
 [[net.forward]]
