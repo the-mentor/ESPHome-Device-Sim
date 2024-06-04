@@ -13,8 +13,9 @@ To use this ESPHome device simulator you will need the install the following:
 * `pip3 install esphome`
 
 ## How to use the Emulator
-* Open a console and nevigate to the repo.
-* Run `esphome compile test-device.yaml` and wait for the download and compiling to finish.
+* Open a console and navigate to the repo.
+* Change directory to the device directory you want to simulate for example `cd esp32`
+* Run `esphome compile test-esp32-device.yaml` and wait for the download and compiling to finish.
 * In VSCode open the command palette (CTRL+SHIFT+P) and search for `Wokwi: Start Simulator`
 * Modify the `test-device.yaml` to test your own code.
 
