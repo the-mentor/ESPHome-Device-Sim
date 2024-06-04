@@ -1,0 +1,7 @@
+[wokwi]
+version = 1
+elf = ".esphome/build/test-esp32-device/.pioenvs/test-esp32-device/firmware.elf"
+firmware = ".esphome/build/test-esp32-device/.pioenvs/test-esp32-device/firmware.bin"
+
+[net]
+gateway="ws://localhost:9011"
