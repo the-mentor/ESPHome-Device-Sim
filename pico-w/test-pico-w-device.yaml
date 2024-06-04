@@ -1,0 +1,44 @@
+esphome:
+  name: test-pico-w-device
+  friendly_name: test-pico-w-device
+
+rp2040:
+  board: rpipicow
+  framework:
+    platform_version: https://github.com/maxgerhardt/platform-raspberrypi.git
+
+# Enable logging
+logger:
+
+wifi:
+  ssid: !secret WiFi_SSID
+#  password: !secret WiFi_Password
+  
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    password: !secret AP_Password
+
+# Enable Home Assistant API
+api:
+  # encryption:
+  #   key: !secret encryption_key
+
+ota:
+ # password: !secret OTA_Password
+
+# web_server:
+#   port: 80
+#   auth:
+#     username: !secret web_server_username
+#     password: !secret web_server_password
+
+# captive_portal:
+    
+switch:
+  - platform: gpio
+    name: relay
+    pin: GPIO27
+    id: relay
+    restore_mode: restore_default_off
+
+button:

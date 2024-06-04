@@ -1,0 +1,9 @@
+[wokwi]
+version = 1
+elf = ".esphome/build/test-pico-w-device/.pioenvs/test-pico-w-device/firmware.elf"
+firmware = ".esphome/build/test-pico-w-device/.pioenvs/test-pico-w-device/firmware.uf2"
+
+# Forward http://localhost:8180 to port 80 on the simulated ESP32:
+[[net.forward]]
+from = "localhost:8180"
+to = "target:80"
