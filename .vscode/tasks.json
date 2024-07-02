@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "ESPHome Simulator - Run IoT Gateway",
+        "type": "shell",
+        "command": "wokwigw --forward 6053:10.13.37.2:6053,2040:10.13.37.2:2040,3232:10.13.37.2:3232,5353:10.13.37.2:5353,8266:10.13.37.2:8266,8892:10.13.37.2:8892,80:10.13.37.2:80,8080:10.13.37.2:80",
+        "windows": {
+          "command": "wokwigw --forward 6053:10.13.37.2:6053,2040:10.13.37.2:2040,3232:10.13.37.2:3232,5353:10.13.37.2:5353,8266:10.13.37.2:8266,8892:10.13.37.2:8892,80:10.13.37.2:80,8080:10.13.37.2:80"
+        },
+        "group": "ESPhome-Device-Sim",
+        "presentation": {
+          "reveal": "always",
+          "panel": "new"
+        }
+      },
+      {
+        "label": "ESPHome Simulator - Compile Device Firmware",
+        "type": "shell",
+        "command": "esphome compile ${input:esphome-yaml-path-param}",
+        "group": "ESPhome-Device-Sim",
+        "presentation": {
+          "reveal": "always"
+        }
+      }
+    ],
+    "inputs": [
+      {
+          "id": "esphome-yaml-path-param",
+          "description": "ESPHome Device YAML Path",
+          "default": "",
+          "type": "promptString"
+      },
+  ]
+}
