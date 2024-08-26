@@ -34,6 +34,23 @@ web_server:
     password: !secret web_server_password
 
 captive_portal:
+
+i2c:
+  sda: GPIO21
+  scl: GPIO22
+  frequency: 400khz
+  scan: True
+
+display:
+  - platform: ssd1306_i2c
+    model: "SSD1306 128x64"
+    lambda: |-
+      it.image(0, 0, id(hello_world), COLOR_OFF, COLOR_ON);
+      it.line(0, 7, 50, 7);
+
+image:
+  file: "../images/hello_world.png"
+  id: hello_world
     
 switch:
   - platform: gpio
