@@ -11,6 +11,9 @@ To use this ESPHome device simulator you will need the install the following:
 ### Python3 and Python Packages
 * `pip3 install wheel`
 * `pip3 install esphome`
+* `pip3 install pillow==10.2.0`
+* On Windows, also:
+  * `pip3 install python-magic-bin==0.4.14`
 
 ## How to use the Emulator
 * Open a console and navigate to the repo.

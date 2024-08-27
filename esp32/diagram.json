@@ -14,6 +14,13 @@
       "attrs": { "color": "blue" }
     },
     {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 171.94,
+      "left": -127.84,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    {
       "type": "wokwi-led",
       "id": "led2",
       "top": 68.96,
@@ -29,6 +36,10 @@
     [ "esp:GND.2", "led2:C", "black", [ "h0" ] ],
     [ "esp:GND.2", "led1:C", "black", [ "h0" ] ],
     [ "esp:D26", "r1:2", "green", [ "h0" ] ],
-    [ "r2:2", "esp:D27", "green", [ "v0" ] ]
+    [ "r2:2", "esp:D27", "green", [ "v0" ] ],
+    [ "esp:GND.2", "oled1:GND", "black", [ "h0" ] ],
+    [ "esp:VIN", "oled1:VCC", "red", [ "h0" ] ],
+    [ "esp:D21", "oled1:SDA", "green", [ "h20", "v100", "h0" ] ],
+    [ "esp:D22", "oled1:SCL", "blue", [ "h30", "v135", "h0" ] ]
   ]
 }
