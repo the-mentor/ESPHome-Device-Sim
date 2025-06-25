@@ -12,8 +12,8 @@ logger:
 
 wifi:
   ssid: !secret WiFi_SSID
-#  password: !secret WiFi_Password
-  
+  #  password: !secret WiFi_Password
+
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     password: !secret AP_Password
@@ -25,7 +25,7 @@ api:
 
 ota:
   - platform: esphome
- # password: !secret OTA_Password
+  # password: !secret OTA_Password
 
 web_server:
   port: 80
@@ -49,9 +49,10 @@ display:
       it.line(0, 7, 50, 7);
 
 image:
-  file: "../images/hello_world.png"
-  id: hello_world
-    
+  - file: "../images/hello_world.png"
+    id: hello_world
+    type: grayscale
+
 switch:
   - platform: gpio
     name: relay
